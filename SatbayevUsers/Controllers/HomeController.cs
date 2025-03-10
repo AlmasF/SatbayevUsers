@@ -4,11 +4,11 @@ using SatbayevUsers.Models;
 
 namespace SatbayevUsers.Controllers;
 
-public class ItemsController : Controller
+public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public ItemsController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }

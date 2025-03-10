@@ -6,6 +6,6 @@
         public string Name { get; set; } = null!;
         public string Email { get; set; } = null!;
         public DateTime DateOfBirth { get; set; }
-        public int IIN { get; set; }
+        public string IIN { get; set; }
     }
 }

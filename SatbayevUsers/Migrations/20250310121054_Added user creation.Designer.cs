@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SatbayevUsers.Data;
 
@@ -11,9 +12,11 @@ using SatbayevUsers.Data;
 namespace SatbayevUsers.Migrations
 {
     [DbContext(typeof(SatbayevUsersContext))]
-    partial class SatbayevUsersContextModelSnapshot : ModelSnapshot
+    [Migration("20250310121054_Added user creation")]
+    partial class Addedusercreation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,9 +40,8 @@ namespace SatbayevUsers.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IIN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IIN")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
