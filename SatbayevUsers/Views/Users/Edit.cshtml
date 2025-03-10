@@ -1,0 +1,27 @@
+﻿@model SatbayevUsers.Models.User
+
+@{
+	ViewData["Title"] = "Изменение пользователя";
+}
+
+<h3>Заполните форму</h3>
+
+<form asp-action="Edit" method="post">
+	<div class="form-group">
+		<label for="Name">Имя</label>
+		<input type="text" class="form-control" asp-for="Name" />
+	</div>
+	<div class="form-group">
+		<label for="Email">Электронная почта</label>
+		<input type="text" class="form-control" asp-for="Email" />
+	</div>
+	<div class="form-group">
+		<label for="IIN">ИИН</label>
+		<input type="text" class="form-control" asp-for="IIN" maxlength="12" />
+	</div>
+	<div class="form-group">
+		<label for="DateOfBirth">Дата рождения</label>
+		<input type="date" class="form-control" asp-for="DateOfBirth" />
+	</div>
+	<button type="submit" class="btn btn-primary mt-2">Создать</button>
+</form>
